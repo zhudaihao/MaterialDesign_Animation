@@ -21,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -51,8 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 setView2();
             }
         });
-    }
 
+        startActivity(new Intent(this, LoginActivity.class));
+    }
 
 
     private void setView() {
@@ -114,9 +113,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         Explode explode = new Explode();//展开效果
-		explode.setDuration(500);
-		getWindow().setExitTransition(explode);//出去的动画
-		getWindow().setEnterTransition(explode);//进来的动画
+        explode.setDuration(500);
+        getWindow().setExitTransition(explode);//出去的动画
+        getWindow().setEnterTransition(explode);//进来的动画
 
 //		Fade fade = new Fade();//渐变效果
 //		fade.setDuration(500);
